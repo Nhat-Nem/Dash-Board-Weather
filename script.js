@@ -225,7 +225,7 @@ function getcitycoordinates() {
     console.log(cityname);
     cityinput.value = '';
     if (!cityname) return;
-    let api_url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityname}&limit=1&appid=${api_key}`;
+    let api_url = `https://api.openweathermap.org/geo/1.0/direct?q=${cityname}&limit=1&appid=${api_key}`;
     fetch(api_url).then(res => res.json()).then(data => {
         console.log(data)
         let {name, lat, lon, country, state} = data[0];
